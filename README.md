@@ -1,5 +1,5 @@
 ## Url2
-Crawler series tool set.
+爬虫系列工具集.
 
 --------
 ## Install
@@ -18,7 +18,7 @@ url = 'https://www.huya.com/669166'
 html = url2(url).html
 print(html)
 ```
-输出:
+result:
 ```
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="ie6" lang="zh-cmn-Hans"> <![endif]-->
@@ -49,7 +49,7 @@ xp = url2(url).xpath
 hrefs = xp('//@href')
 print(hrefs)
 ```
-输出:
+result:
 ```
 ['https://www.huya.com/guanzongo', 'https://a.msstatic.com/huya/main3/common/headerStyle_694cd.css', 'https://a.msstatic.com/huya/main3/app/room_normal_9e1d4.css', 'https://a.msstatic.com/huya/h5player/room/2010221757/vplayer.css', 'https://a.msstatic.com/huya/h5player/room/2010221757/vplayer.js', 'https://www.huya.com/', 'https://www.huya.com/', 'https://www.huya.com/l', 'https://www.huya.com/g', 'https://www.huya.com/m', 'http://v.huya.com', 'https://www.huya.com/g/100023', 'https://www.huya.com/g/lol', 'http://v.huya.com/u/20020995', '//www.huya.com/download/', '#', '#', '#', 'https://www.huya.com/myfollow', 'https://www.huya.com/l', 'https://www.huya.com/m', 'https://www.huya.com/g/100023', 'https://www.huya.com/g/100002', 'https://www.huya.com/g/100022', 'https://www.huya.com/g/100004', 'https://hd.huya.com/pc/2019zhubo/pages/index.html', 'https://www.huya.com/myfollow', 'https://www.huya.com/l', 'https://www.huya.com/660000', 'https://www.huya.com/660006', 'https://www.huya.com/kpl', 'https://www.huya.com/660004', 'https://www.huya.com/660006', '//www.huya.com/m', 'https://www.huya.com/g/100023'
 ......
@@ -71,7 +71,7 @@ as_ = soup.find_all("a",href=True)
 hrefs = [a.get('href') for a in as_]
 print(hrefs)
 ```
-输出:
+result:
 ```
 ['https://www.huya.com/', 'https://www.huya.com/', 'https://www.huya.com/l', 'https://www.huya.com/g', 'https://www.huya.com/m', 'http://v.huya.com', 'https://www.huya.com/g/100023', 'https://www.huya.com/g/1', 'http://v.huya.com/u/20020995', '#', '//www.huya.com/download/', '#', '#', 'https://www.huya.com/myfollow', 'https://www.huya.com/l', 'https://www.huya.com/m', 'https://www.huya.com/g/100023', 'https://www.huya.com/g/100002', 'https://www.huya.com/g/100022', 'https://www.huya.com/g/100004', 'https://hd.huya.com/pc/2019zhubo/pages/index.html', 'https://www.huya.com/myfollow', 'https://www.huya.com/l', 'https://www.huya.com/660000', 'https://www.huya.com/660006', 'https://www.huya.com/s', 'https://www.huya.com/lck', 
 ......
@@ -93,7 +93,7 @@ data = f'kw:{content}'
 x = url2(url, form_data=data).html
 print(x)
 ```
-输出:
+result:
 ```
 {'errno': 0,
  'data': [{'k': '你好', 'v': '[nǐ hǎo] how do you do; how are you; hello;'},
