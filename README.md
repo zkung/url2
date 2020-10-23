@@ -4,7 +4,7 @@ Crawler series tool set.
 --------
 ## Install
 ```
-pip install Url2
+pip install url2
 ```
 --------
 ## Usage
