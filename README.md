@@ -9,7 +9,7 @@ pip install url2
 --------
 ## Parameter
 ```python
-url2(url, headers={'User-Agent':'Mozolla/5.0'}, encode=False, init=False, verify=True, cdx=True, form_data=None)
+url2(url, headers={'User-Agent':'Mozolla/5.0'}, encode=False, verify=True, cdx=True, form_data=None)
 ```
 ## Usage
 
