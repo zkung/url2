@@ -6,13 +6,12 @@ from lxml import etree
 class url2(object):
     """
     """
-    def __init__(self, url, headers={'User-Agent':'Mozolla/5.0'}, encode=False, init=False, verify=True, cdx=True, form_data=None):
+    def __init__(self, url, headers={'User-Agent':'Mozolla/5.0'}, encode=False, verify=True, redirect=True, form_data=None):
         self.url = url
         self.headers = headers
         self.encode = encode
-        self.init = init
         self.verify = verify
-        self.cdx = cdx
+        self.redirect = redirect
         self.form_data = form_data
     
     @property
@@ -21,14 +20,13 @@ class url2(object):
         url2html
         """
         if self.form_data == None:
-            r = requests.get(self.url, headers=self.headers, verify=self.verify, allow_redirects=self.cdx)
-            if self.init == False:
-                if self.encode == False:
-                    r.encoding = r.apparent_encoding
-                else:
-                    r.encoding = r.apparent_encoding
-                    r.encoding = 'utf-8'
-                result = r.text
+            r = requests.get(self.url, headers=self.headers, verify=self.verify, allow_redirects=self.redirect)
+            if self.encode == False:
+                r.encoding = r.apparent_encoding
+            else:
+                r.encoding = r.apparent_encoding
+                r.encoding = 'utf-8'
+            result = r.text
         else:
             def headers_handle(headers):
                 '''
@@ -49,7 +47,7 @@ class url2(object):
 
             form_data = headers_handle(self.form_data)
             
-            result = requests.post(self.url,data=form_data, headers=self.headers, verify=self.verify, allow_redirects=self.cdx).text
+            result = requests.post(self.url,data=form_data, headers=self.headers, verify=self.verify, allow_redirects=self.redirect).text
             
         return result
 
