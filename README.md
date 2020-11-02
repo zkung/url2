@@ -13,7 +13,7 @@ url2(url, headers={'User-Agent':'Mozolla/5.0'}, encode=False, verify=True, cdx=T
 ```
 ## Usage
 
-url2html
+**url2html**
 
 ```python
 from url2 import url2
@@ -43,7 +43,7 @@ result:
 .
 ```
 --------
-url2xpath
+**url2xpath**
 
 ```python
 from url2 import url2
@@ -64,7 +64,7 @@ result:
 .
 ```
 --------
-url2soup
+**url2soup**
 
 ```python
 from url2 import url2
@@ -86,7 +86,7 @@ result:
 .
 ```
 --------
-url2post
+**url2post**
 
 ```python
 from url2 import url2
