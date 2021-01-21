@@ -101,3 +101,74 @@ result:
   {'k': '你好吗', 'v': 'How are you; How are you doing; How do you do;'}]}
 ```
 --------
+build/auto
+
+```python
+base = url2('https://top.chinaz.com/diqu/index_GuangDong_ShenZhen.html')
+base.build({'web_name':['腾讯网'], 'url':['qq.com']})
+base.auto('https://top.chinaz.com/diqu/index_GuangDong_ZhuHai.html')
+```
+result:
+```
+{'web_name': ['魅族官网',
+  '5118站长大数据',
+  '学信网',
+  '魅族Flyme官网',
+  '时代互联',
+  '有问必答健康网健康知识数据中心',
+  '格力',
+  '北京师范大学珠海分校',
+  '汤臣倍健',
+  '周易天地',
+  '中国摄影在线',
+  '珠海人力资源网',
+  '中国珠海',
+  '天堂纪念网',
+  '爱词霸英语沙龙',
+  '魅族官网',
+  '耐思尼克',
+  '格力官网',
+  'Flyme社区',
+  '全志科技',
+  'iBS语言学校',
+  '魅族社区',
+  '李锦记',
+  '淘域网',
+  '紫金论坛',
+  '紫金论坛',
+  'WPS海外版官网',
+  '北京理工大学珠海学院',
+  '仪表展览网',
+  '格力商城'],
+ 'url': ['www.meizu.com',
+  'www.5118.com',
+  'account.chsi.com.cn',
+  'flyme.cn',
+  'now.cn',
+  'tag.120ask.com',
+  'gree.com',
+  'bnuz.edu.cn',
+  'by-health.com',
+  '64gua.com',
+  'cphoto.net',
+  'zh-hr.com',
+  'zhuhai.gov.cn',
+  'waheaven.com',
+  'news.iciba.com',
+  'meizu.cn',
+  'iisp.com',
+  'www.gree.com.cn',
+  'bbs.flyme.cn',
+  'allwinnertech.com',
+  'zhibs.net',
+  'bbs.meizu.cn',
+  'lkk.com',
+  'b08.com',
+  'gdzijin.com',
+  'bbs.gdzijin.com',
+  'wps.com',
+  'zhbit.com',
+  '18show.cn',
+  'mall.gree.com']}
+```
+--------

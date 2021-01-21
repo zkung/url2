@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='url2',
-    version='1.0',
+    version='1.1.0',
     description=(
         'Crawler series tool set.'
     ),
@@ -33,5 +33,6 @@ setup(
         'beautifulsoup4',
         'lxml',
         'requests',
+        'autoscraper',
     ],
 )
