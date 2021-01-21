@@ -105,8 +105,7 @@ result:
   {'k': '你好吗', 'v': 'How are you; How are you doing; How do you do;'}]}
 ```
 --------
-<<<<<<< HEAD
-build/auto
+**build/auto**
 
 ```python
 base = url2('https://top.chinaz.com/diqu/index_GuangDong_ShenZhen.html')
