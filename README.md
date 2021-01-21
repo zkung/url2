@@ -1,15 +1,19 @@
 ## Url2
-爬虫系列工具集.
+Crawler series tool set.
 
 --------
 ## Install
 ```
-pip install Url2
+pip install url2
 ```
 --------
+## Parameter
+```python
+url2(url, headers={'User-Agent':'Mozolla/5.0'}, encode=False, verify=True, cdx=True, form_data=None)
+```
 ## Usage
 
-url2html
+**url2html**
 
 ```python
 from url2 import url2
@@ -39,7 +43,7 @@ result:
 .
 ```
 --------
-url2xpath
+**url2xpath**
 
 ```python
 from url2 import url2
@@ -60,7 +64,7 @@ result:
 .
 ```
 --------
-url2soup
+**url2soup**
 
 ```python
 from url2 import url2
@@ -82,7 +86,7 @@ result:
 .
 ```
 --------
-url2post
+**url2post**
 
 ```python
 from url2 import url2
@@ -101,6 +105,7 @@ result:
   {'k': '你好吗', 'v': 'How are you; How are you doing; How do you do;'}]}
 ```
 --------
+<<<<<<< HEAD
 build/auto
 
 ```python
@@ -172,3 +177,5 @@ result:
   'mall.gree.com']}
 ```
 --------
+=======
+>>>>>>> b6598c37e9d8a6c2fa2b477a7e04f27279b7f407
