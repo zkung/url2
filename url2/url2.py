@@ -22,7 +22,6 @@ class url2(object):
         url2html
         """
         if self.form_data == None:
-<<<<<<< HEAD
             r = requests.get(self.url, headers=self.headers, verify=self.verify, allow_redirects=self.cdx)
             if self.init == False:
                 if self.encode == False:
@@ -30,7 +29,6 @@ class url2(object):
                 else:
                     r.encoding = self.encode
                 result = r.text
-=======
             r = requests.get(self.url, headers=self.headers, verify=self.verify, allow_redirects=self.redirect)
             if self.encode == False:
                 r.encoding = r.apparent_encoding
@@ -38,7 +36,6 @@ class url2(object):
                 r.encoding = r.apparent_encoding
                 r.encoding = 'utf-8'
             result = r.text
->>>>>>> b6598c37e9d8a6c2fa2b477a7e04f27279b7f407
         else:
             def headers_handle(headers):
                 '''
@@ -59,12 +56,7 @@ class url2(object):
 
             form_data = headers_handle(self.form_data)
             headers = headers_handle(self.headers)
-            
-<<<<<<< HEAD
-            result = requests.post(self.url,data=form_data, headers=headers, verify=self.verify, allow_redirects=self.cdx).text
-=======
-            result = requests.post(self.url,data=form_data, headers=self.headers, verify=self.verify, allow_redirects=self.redirect).text
->>>>>>> b6598c37e9d8a6c2fa2b477a7e04f27279b7f407
+            result = requests.post(self.url,data=form_data, headers=headers, verify=self.verify, allow_redirects=self.redirect).text
             
         return result
 
