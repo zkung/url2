@@ -87,9 +87,10 @@ class url2(object):
         return etree.HTML(html_).xpath
     
     
-    def build(self, wanted_dict=None, model_name=None):
+    def build(self, wanted_dict, model_name=None):
         """
         url2autospider
+        wanted_dict -> [Wanted]
         """
         html_ = self.html
         url = self.url
