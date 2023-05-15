@@ -22,6 +22,8 @@ class url2(object):
         """
         url2html
         """
+        if isinstance(headers, str):
+            self.headers = self.headers_handle(headers)
         if self.form_data == None:
             r = requests.get(self.url, headers=self.headers, verify=self.verify, allow_redirects=self.redirect)
             if self.encode == False:
@@ -46,7 +48,7 @@ class url2(object):
     @staticmethod
     def headers_handle(headers):
         '''
-        对请求头加引号
+        Add quotes to the request header
         '''
         if headers[0] == '\n':
             headers = headers[1:]
@@ -102,6 +104,9 @@ class url2(object):
         
     
     def build_load(self, url, model_name='1'):
+        """
+        Load build model
+        """
         scraper = AutoScraper()
         scraper.load(model_name)
         html_ = requests.get(url)
