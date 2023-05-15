@@ -87,18 +87,20 @@ class url2(object):
         return etree.HTML(html_).xpath
     
     
-    def build(self, wanted_dict=None, model_name='1'):
+    def build(self, wanted_dict=None, model_name=None):
         """
         url2autospider
         """
         html_ = self.html
         url = self.url
         scraper = AutoScraper()
-        scraper.build(html=html_, wanted_dict=wanted_dict)
-        # data = scraper.get_result_similar(url, html=html_, group_by_alias=True)
-        scraper.save(model_name)
+        result = scraper.build(html=html_, wanted_dict=wanted_dict)
+        if model_name:
+            scraper.save(model_name)
+        return result
+        
     
-    def auto(self, url, model_name='1'):
+    def build_load(self, url, model_name='1'):
         scraper = AutoScraper()
         scraper.load(model_name)
         html_ = requests.get(url)
