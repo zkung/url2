@@ -22,8 +22,8 @@ class url2(object):
         """
         url2html
         """
-        if isinstance(headers, str):
-            self.headers = self.headers_handle(headers)
+        if isinstance(self.headers, str):
+            self.headers = self.headers_handle(self.headers)
         if self.form_data == None:
             r = requests.get(self.url, headers=self.headers, verify=self.verify, allow_redirects=self.redirect)
             if self.encode == False:
