@@ -18,7 +18,7 @@ class url2(object):
         self.html = self.url2html
 
     @property
-    def url2html(self):
+    def url2html(self) -> str:
         """
         url2html
         """
@@ -46,7 +46,7 @@ class url2(object):
             return self.response.text
 
     @staticmethod
-    def headers_handle(headers):
+    def headers_handle(headers: str) -> dict:
         '''
         Add quotes to the request header
         '''
@@ -65,28 +65,13 @@ class url2(object):
 
 
     @property
-    def json(self):
-        return json.loads(self.html)
+    def json(self) -> dict: return json.loads(self.html)
 
     @property
-    def soup(self):
-        """
-        url2soup
-        """
-        html_ = self.html
-        soup = BeautifulSoup(html_)
-        return soup
-
-    def html2xpath(html_):
-        pass
+    def soup(self) -> BeautifulSoup: return BeautifulSoup(self.html)
     
     @property
-    def xpath(self):
-        """
-        url2xpath
-        """
-        html_ = self.html
-        return etree.HTML(html_).xpath
+    def xpath(self) -> etree.HTML: return etree.HTML(self.html).xpath
     
     
     def build(self, wanted_dict, model_name=None):
